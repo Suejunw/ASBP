@@ -37,6 +37,8 @@ python demo.py  --trainN 5 --N 5 --K 1 --Q 1 --model pair --encoder bert --pair 
 
 --fp16: use nvidia apex fp16.
 
---na_rate NOTA rate(1 for 15%, 5 for 50%)
+--na_rate: NOTA rate(1 for 15%, 5 for 50%)
 
 --only_test: add to test a trained model.
+
+For two-stage training, first train with a na_rate of 0, then train with a na_rate of 1 or 5 based on the checkpoint.
